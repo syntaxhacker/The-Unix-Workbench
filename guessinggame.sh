@@ -11,8 +11,8 @@ fi
 }
 
 echo "how many files are in the current directory ?"
-read numOfFiles
-echo "guess number of files in directory"
+numOfFiles=$(ls -l |grep "^-"|wc -l)
+echo "Guess number of files in directory"
 userguess=NULL
 while [[ $userguess -ne $numOfFiles ]]
 do
